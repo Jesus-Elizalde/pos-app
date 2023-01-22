@@ -2,12 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import prisma from "../utils/db";
-import Table from "../components/Table";
+
+import SideNavbar from "../components/SideNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ items = [] }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -17,19 +17,11 @@ export default function Home({ items = [] }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>
-          <Table items={items} />
+        <div className="main__container">
+          <SideNavbar />
+          <div></div>
         </div>
       </main>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  const items = await prisma.item.findMany();
-  return {
-    props: {
-      items: JSON.parse(JSON.stringify(items)),
-    },
-  };
 }

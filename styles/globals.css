@@ -1,0 +1,12 @@
+.main__container {
+  display: flex;
+}
+
+.fr {
+  display: flex;
+}
+
+.fc {
+  display: flex;
+  flex-direction: column;
+}
