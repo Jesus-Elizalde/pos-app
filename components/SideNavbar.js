@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Sidebar.module.css";
+import styles from "../styles/SideBar.module.css";
 import Link from "next/link";
 import { CubeIcon } from "@heroicons/react/20/solid";
 import { Squares2X2Icon } from "@heroicons/react/20/solid";
