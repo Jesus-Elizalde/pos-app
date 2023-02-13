@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className="main__container">
-          <SideNavbar />
+          {/* <SideNavbar /> */}
           <div>The Dashboard page</div>
         </div>
       </main>

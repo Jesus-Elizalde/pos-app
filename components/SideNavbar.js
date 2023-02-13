@@ -14,8 +14,8 @@ const SideNavbar = () => {
   ];
   return (
     <div className={styles.sb__container}>
-      {MENUITEMS.map((item) => (
-        <Link href={item.href}>
+      {MENUITEMS.map((item, idx) => (
+        <Link href={item.href} key={idx}>
           <div className="fr">
             <p>{item.name}</p>
           </div>

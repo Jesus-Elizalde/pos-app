@@ -7,7 +7,7 @@ import SideNavbar from "../components/SideNavbar";
 const products = ({ items = [] }) => {
   return (
     <div className="main__container">
-      <SideNavbar />
+      {/* <SideNavbar /> */}
       <div>
         <Table items={items} />
       </div>
