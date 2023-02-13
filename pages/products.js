@@ -4,7 +4,7 @@ import prisma from "../utils/db";
 
 import SideNavbar from "../components/SideNavbar";
 
-const inventory = ({ items = [] }) => {
+const products = ({ items = [] }) => {
   return (
     <div className="main__container">
       <SideNavbar />
@@ -15,7 +15,7 @@ const inventory = ({ items = [] }) => {
   );
 };
 
-export default inventory;
+export default products;
 export async function getServerSideProps() {
   const items = await prisma.item.findMany();
   return {

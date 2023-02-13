@@ -6,11 +6,24 @@ import { Squares2X2Icon } from "@heroicons/react/20/solid";
 import { CreditCardIcon } from "@heroicons/react/20/solid";
 
 const SideNavbar = () => {
+  const MENUITEMS = [
+    { name: "Home", href: "/" },
+    { name: "Orders", href: "/orders" },
+    { name: "Products", href: "/products" },
+    { name: "Settings", href: "/settings" },
+  ];
   return (
     <div className={styles.sb__container}>
-      <Link href="/">
-        <div className="fr">
-          <p>Dashbaord</p>
+      {MENUITEMS.map((item) => (
+        <Link href={item.href}>
+          <div className="fr">
+            <p>{item.name}</p>
+          </div>
+        </Link>
+      ))}
+      {/* <Link href="/">
+        <div className="fr ">
+          <p>Home</p>
           <Squares2X2Icon className={styles.icon__size} />
         </div>
       </Link>
@@ -25,7 +38,7 @@ const SideNavbar = () => {
           <p>Sale</p>
           <CreditCardIcon className={styles.icon__size} />
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };
